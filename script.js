@@ -1,41 +1,27 @@
-const container = document.querySelector('.container');
+let container = document.querySelector('.container');
+let containerHeight = container.offsetHeight;
 
-const row = document.createElement('div');
-row.classList.add('rows');
+let row = document.createElement('div');
+row.classList.add('row');
+let square = document.createElement('div');
+square.classList.add('square')
 
-const square = document.createElement('div');
-square.classList.add('square');
 
-function rows(){
+function fillContainer(x){
 
-    container.append(row.cloneNode());
-    // row.id = 1
-
-}
-
-function add_rows(){
-
-    for (let j = 1; j <= 16; j++){
-
-        for ( let i = 1; i <= 16; i++ ){
-            row.id = i;
-            rows();
-            document.getElementById(row.id).append(square.cloneNode())
-        }
+    
+    for (let i = 1; i <= x; i++){
         
+        row.id = i;
+        container.append(row.cloneNode());
+
+        for (let j = 1; j <= x; j++){
+            
+            document.getElementById(row.id).append(square.cloneNode());
+
+        }
+
     }
-
-
+    
 }
-
-// function add_squares(x){
-
-//     for(let i = 1; i<= x*x; i++){
-
-//         container.append(square.cloneNode());
-
-//     }
-
-// }
-
 

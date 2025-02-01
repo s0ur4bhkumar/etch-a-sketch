@@ -1,13 +1,6 @@
 html,body{
     height: 100%;
-    box-sizing: border-box;
-}
-
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
 }
 
 *{
@@ -16,38 +9,36 @@ body{
     padding: 0;
 }
 
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .container{
 
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    border: 2px solid rgb(247, 8, 8);
-    max-height: 960px;
-    max-width: 960px;
-    /* width: max-content;  */
-    /* height: max-content;  */
+    flex-wrap: wrap;
+    height: 600px;
+    width: 600px;
+    border: 1px solid red;
+
 }
 
-.rows{
-    /* /* border: 2px solid black; */
-    height: max-content;
-    /* max-width: 960px; */
+.row{
+    /* border: 1px solid blanchedalmond; */
     display: flex;
-    flex-wrap: wrap;
-    /* flex-direction: column; */
-    align-content: center;
-    height: max-content;
-    width: max-content;
-    margin-bottom: 0;
     flex: 1 1 auto;
 }
 
 .square{
-    border: 1px solid #000; /* Optional: Add a border for visibility */
+
+    /* border: 1px solid black; */
     flex: 1 1 auto;
-    flex-wrap: wrap;
-    height: 40px; /* Adjust the height as needed */
-    width: 40px; /* Adjust the width as needed */
+    /* height: 20px;
+    width: 20px; */
+    
 }
