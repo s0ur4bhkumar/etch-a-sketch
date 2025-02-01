@@ -7,7 +7,7 @@ let square = document.createElement('div');
 square.classList.add('square')
 
 
-function fillContainer(x){
+function fillContainer(x = 16){
 
     
     for (let i = 1; i <= x; i++){
@@ -16,12 +16,18 @@ function fillContainer(x){
         container.append(row.cloneNode());
 
         for (let j = 1; j <= x; j++){
-            
-            document.getElementById(row.id).append(square.cloneNode());
+            let newSquare = square.cloneNode()
+            document.getElementById(row.id).append(newSquare);
+            newSquare.addEventListener('mouseenter', () => {
+
+                newSquare.style.backgroundColor = 'red';
+
+            });
 
         }
 
     }
     
 }
+
 
