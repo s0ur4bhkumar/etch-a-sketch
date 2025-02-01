@@ -27,7 +27,29 @@ function fillContainer(x = 16){
         }
 
     }
-    
+    return;
 }
 
+function resize(){
 
+
+    let parametres = parseInt(prompt('enter the number of squares (<=100), the default is 16: '));
+
+    if (isNaN(parametres) || parametres > 100){
+        alert('please enter valid parametre');
+        document.querySelector('.container').innerHTML = '';
+        fillContainer(16);
+        // return parametres;
+
+    }
+    else{
+
+        document.querySelector('.container').innerHTML = '';
+        fillContainer(0);
+        fillContainer(parametres);
+
+    }
+
+}
+
+fillContainer();
