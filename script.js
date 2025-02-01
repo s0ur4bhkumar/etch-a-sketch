@@ -33,20 +33,20 @@ function fillContainer(x = 16){
 function resize(){
 
 
-    let parametres = parseInt(prompt('enter the number of squares (<=100), the default is 16: '));
+    let parameters = parseInt(prompt('enter the number of squares (<=100), the default is 16: '));
 
-    if (isNaN(parametres) || parametres > 100){
-        alert('please enter valid parametre');
+    if (isNaN(parameters) || parameters > 100){
+        alert('please enter valid parameter');
         document.querySelector('.container').innerHTML = '';
         fillContainer(16);
-        // return parametres;
+        // return parameters;
 
     }
     else{
 
         document.querySelector('.container').innerHTML = '';
         fillContainer(0);
-        fillContainer(parametres);
+        fillContainer(parameters);
 
     }
 
